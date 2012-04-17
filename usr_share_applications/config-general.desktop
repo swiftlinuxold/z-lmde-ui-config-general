@@ -1,0 +1,8 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Control Center
+Exec=/usr/local/bin/config-general.py
+Icon=/usr/share/icons/gTangish-2.0a1/32x32/categories/preferences-desktop.png
+Terminal=false
+Type=Application
+Categories=Accessories;Other;Settings;System;Utility
