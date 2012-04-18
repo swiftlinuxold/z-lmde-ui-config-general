@@ -33,13 +33,12 @@ os.system ('echo BEGIN ADDING CONTROL CENTER')
 
 import shutil, subprocess
 
-os.system ('echo ADDING grandr (sets screen resolution')
-os.system ('apt-get install -qq grandr')
+add_pkg ('lxrandr') # Add monitor configuration tool
 	
-#src = dir_develop + '/ui-config-general/usr_local_bin/config-general.py'
-#dest = '/usr/local/bin/config-general.py'
-#shutil.copyfile (src, dest)
-#os.system ('chmod a+rx ' + dest)
+src = dir_develop + '/ui-config-general/usr_local_bin/config-general.py'
+dest = '/usr/local/bin/config-general.py'
+shutil.copyfile (src, dest)
+os.system ('chmod a+rx ' + dest)
 
 #src = dir_develop + '/ui-config-general/usr_share_applications/config-general.desktop'
 #dest = '/usr/share/applications/config-general.desktop'

@@ -19,28 +19,52 @@ class Wizard:
         
         # EACH OPTION GETS ITS OWN HORIZONTAL BOX (wizard_option)
         
-        # OPTION 1: GNOME Network Manager
+        # OPTION 1: Change Monitor Display Settings
+        self.box_image = '/usr/share/icons/gTangish-2.0a1/32x32/apps/display-capplet.png'
+        self.box_label = 'Change Monitor Display Settings'
+        self.box = self.wizard_option (self.box_image, self.box_label, self.config_monitor)
+        self.vbox.add (self.box)
+        
+        # Option 2: Hardware Wizard
+        self.box_image = '/usr/share/icons/gTangish-2.0a1/32x32/categories/applications-system.png'
+        self.box_label = 'Hardware Wizard'
+        self.box = self.wizard_option (self.box_image, self.box_label, self.config_hardware)
+        self.vbox.add (self.box)
+        
+        # Option 3: Information
+        self.box_image = '/usr/share/icons/gTangish-2.0a1/32x32/status/dialog-information.png'
+        self.box_label = 'System Information Wizard'
+        self.box = self.wizard_option (self.box_image, self.box_label, self.config_info)
+        self.vbox.add (self.box)
+        
+        # Option 4: Network
         self.box_image = '/usr/share/icons/gnome/32x32/categories/preferences-system-network.png'
-        self.box_label = 'GNOME Network Manager'
-        self.box = self.wizard_option (self.box_image, self.box_label, self.nm)
+        self.box_label = 'Network Wizard'
+        self.box = self.wizard_option (self.box_image, self.box_label, self.config_network)
         self.vbox.add (self.box)
         
-        # Option 2: GNOME PPP
-        self.box_image = '/usr/share/icons/hicolor/48x48/apps/gnome-ppp.png'
-        self.box_label = 'GNOME-PPP (dial-up)'
-        self.box = self.wizard_option (self.box_image, self.box_label, self.gnomeppp)
+        # Option 5: Printer
+        self.box_image = '/usr/share/icons/gTangish-2.0a1/32x32/actions/stock_print-setup.png'
+        self.box_label = 'Printer Wizard'
+        self.box = self.wizard_option (self.box_image, self.box_label, self.config_printer)
         self.vbox.add (self.box)
         
-        # Option 3: Firewall
-        self.box_image = '/usr/share/icons/hicolor/48x48/apps/gufw.png'
-        self.box_label = 'Firewall'
-        self.box = self.wizard_option (self.box_image, self.box_label, self.firewall)
+        # Option 6: Software
+        self.box_image = '/usr/share/synaptic/pixmaps/synaptic_32x32.xpm'
+        self.box_label = 'Software Wizard'
+        self.box = self.wizard_option (self.box_image, self.box_label, self.config_software)
         self.vbox.add (self.box)
         
-        # Option 4: Ad Blocker
-        self.box_image = '/usr/share/icons/gTangish-2.0a1/32x32/emblems/emblem-noread.png'
-        self.box_label = 'Ad Blocker'
-        self.box = self.wizard_option (self.box_image, self.box_label, self.adblock)
+        # Option 7: System
+        self.box_image = '/usr/share/icons/gnome/32x32/emblems/emblem-system.png'
+        self.box_label = 'System Wizard'
+        self.box = self.wizard_option (self.box_image, self.box_label, self.config_system)
+        self.vbox.add (self.box)
+        
+        # Option 8: Wallpaper
+        self.box_image = '/usr/share/icons/gnome/32x32/apps/preferences-desktop-wallpaper.png'
+        self.box_label = 'Wallpaper Wizard'
+        self.box = self.wizard_option (self.box_image, self.box_label, self.config_wallpaper)
         self.vbox.add (self.box)
         
         # Show everything
@@ -56,17 +80,30 @@ class Wizard:
         gtk.main_quit()
         return False
         
-    def nm (self, widget, callback_data=None):
-        os.system ('nm-connection-editor &')
+    def config_monitor (self, widget, callback_data=None):
+        os.system ('lxrandr &')
         
-    def gnomeppp (self, widget, callback_data=None):
-        os.system ('gnome-ppp &')
+    def config_hardware (self, widget, callback_data=None):
+        os.system ('python /usr/local/bin/config-hardware.py &')
         
-    def firewall (self, widget, callback_data=None):
-        os.system ('gksu gufw &')
+    def config_info (self, widget, callback_data=None):
+        os.system ('python /usr/local/bin/config-info.py &')
     
-    def adblock (self, widget, callback_data=None):
-        os.system ('gksu /usr/local/bin/block-advert.sh &')
+    def config_network (self, widget, callback_data=None):
+        os.system ('python /usr/local/bin/config-network.py &')
+        
+    def config_printer (self, widget, callback_data=None):
+        os.system ('python /usr/local/bin/config-printer.py &')
+        
+    def config_software (self, widget, callback_data=None):
+        os.system ('python /usr/local/bin/config-software.py &')
+
+    def config_system (self, widget, callback_data=None):
+        os.system ('python /usr/local/bin/config-system.py &')
+
+    def config_wallpaper (self, widget, callback_data=None):
+        os.system ('python /usr/local/bin/config-wallpaper.py &')
+
     
     def wizard_option (self, filename_image, string_label, fctn_action):
         # Horizontal box
@@ -79,7 +116,7 @@ class Wizard:
         
         # Button
         self.button = gtk.Button()
-        self.button.set_size_request(64, 64)
+        self.button.set_size_request(48, 48)
         self.button.connect('clicked', fctn_action)
         self.button.add(self.image) # Add image to button
         self.button.show()

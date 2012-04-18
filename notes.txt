@@ -1,9 +1,11 @@
 WHAT TO INCLUDE:
-Information 
-Configure Network
-Configure Printer
-Get Software
-Change Wallpaper
+Information (config-info)
+Configure Network (config-network)
+Configure Printer (config-printer)
+Get Software (config-software)
+Change Wallpaper (config-wallpaper)
 
-Change Screen Resolution
-
+Configure Monitor (lxrandr)
+Configure Hardware (partitions, mount, install to USB)
+GParted
+Mount tool
