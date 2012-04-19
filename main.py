@@ -40,9 +40,9 @@ dest = '/usr/local/bin/config-general.py'
 shutil.copyfile (src, dest)
 os.system ('chmod a+rx ' + dest)
 
-#src = dir_develop + '/ui-config-general/usr_share_applications/config-general.desktop'
-#dest = '/usr/share/applications/config-general.desktop'
-#shutil.copyfile (src, dest)
+src = dir_develop + '/ui-config-general/usr_share_applications/config-general.desktop'
+dest = '/usr/share/applications/config-general.desktop'
+shutil.copyfile (src, dest)
 
 os.system ('echo FINISHED ADDING CONTROL CENTER')
 os.system ('echo ==============================')
