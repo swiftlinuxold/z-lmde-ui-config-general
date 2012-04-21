@@ -1,0 +1,53 @@
+ANTIX LINUX CONTROL CENTER:
+Desktop
+System
+Network
+Session
+Disks
+Hardware
+
+DESKTOP:
+Wallpaper
+Edit System Monitor (Conky)
+Change GTK2 and icon themes
+Edit IceWM settings
+Change cursor theme
+
+SYSTEM:
+Synaptic
+Configure System
+Choose Startup Services
+Manage Users
+Edit Config Files
+Set Date and Time
+
+NETWORK:
+Network interfaces (ceni)
+Configure GPRS/UMTS
+Wireless (wicd)
+Wireless (rutilt)
+Dial-up
+Firewall
+
+SESSION:
+Change keyboard layout
+Change SLiM background
+Set screen resolution
+Edit login options
+Set auto-login
+
+DISKS:
+Partition
+Mount connected devices
+Backup your system
+Image Partition
+Synchronize directories
+antiX2usb
+
+HARDWARE:
+System information
+Setup printer
+Configure sound
+PC information
+Configure mouse
+Adjust mixer

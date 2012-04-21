@@ -1,0 +1,60 @@
+LINUX MINT DEBIAN EDITION CONTROLS:
+LMDE
+Look and Feel
+Internet and Network
+Hardware
+System
+Other
+
+LMDE:
+Personal
+About Me
+File Management
+Preferred Applications
+Assistive Technologies
+Keyboard shortcuts
+Startup applications
+
+LOOK AND FEEL:
+Appearance
+Desktop Settings
+Nautilus Configurations
+Welcome Screen
+Main Menu
+Screensaver
+Windows
+
+INTERNET AND NETWORK
+Bluetooth
+Network Connections
+Personal File Sharing
+Network
+Network Proxy
+Remote Desktop
+
+HARDWARE
+ADSL/PPPoE
+Monitors
+Power Management
+Sound
+Keyboard
+Mouse
+Printing
+
+SYSTEM
+Backup Tool
+Firewall Config
+Login Screen
+Software Manager
+Time, Date
+Upload Manager
+Windows Wireless Drivers (ndisgtk)
+Domain Blocker
+GParted
+Services
+Synaptic
+Update Manager
+User/Groups
+
+OTHER
+Passwords, Encryption Keys

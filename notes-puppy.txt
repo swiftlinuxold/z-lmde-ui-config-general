@@ -1,0 +1,12 @@
+PUPPY LINUX SETUP MENU
+
+Country
+Startup
+Mouse/keyboard
+ALSA sound
+X Video
+Upgrade Xdrivers
+Connect to network
+Printer setup
+CD/DVD reader/burner
+Firewall
